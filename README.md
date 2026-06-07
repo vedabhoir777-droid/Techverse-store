@@ -1,19 +1,18 @@
-# React + Vite
+# Techverse Store
+# 🛍️ TechVerse Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 About the Project
+TechVerse Store is a responsive e-commerce web application built using **React + Vite**.  
+It displays electronic products like laptops, smartphones, and accessories with a clean UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+- Responsive Navbar
+- Hero Section with banner
+- Product Showcase (Laptops, Smartphones, Headphones)
+- Shop by Categories section
+- Clean and user-friendly UI
 
 ![image alt](https://github.com/vedabhoir777-droid/Techverse-store/blob/2aca63d4c1595f5f1accb90d6bd9eca69fabe9f4/Screenshot%202026-06-07%20124935.png)
 ![image alt](https://github.com/vedabhoir777-droid/Techverse-store/blob/8b82ad367c9c60bafc2abb9174ccba5609acb713/Screenshot%202026-06-07%20124956.png)
