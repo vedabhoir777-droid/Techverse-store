@@ -17,3 +17,4 @@ It displays electronic products like laptops, smartphones, and accessories with 
 ![image alt](https://github.com/vedabhoir777-droid/Techverse-store/blob/2aca63d4c1595f5f1accb90d6bd9eca69fabe9f4/Screenshot%202026-06-07%20124935.png)
 ![image alt](https://github.com/vedabhoir777-droid/Techverse-store/blob/c8634c469354a75225a0607904f3e5e918ecac9f/Screenshot%202026-06-15%20193329.png)
 ![image alt](https://github.com/vedabhoir777-droid/Techverse-store/blob/2a5455c1813e8c5eace6898e4927cc8b0e1482cc/Screenshot%202026-06-15%20193351.png)
+![image alt](https://github.com/vedabhoir777-droid/Techverse-store/blob/49ca58d2bd2b8fd24b7c074c339c93e59081493a/Screenshot%202026-06-15%20193406.png)
