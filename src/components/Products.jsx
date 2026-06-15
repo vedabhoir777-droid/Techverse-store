@@ -10,7 +10,6 @@ const brandOptions = {
 };
 
 function Products() {
-
   const [products, setProducts] = useState([]);
 
   const [name, setName] = useState("");
@@ -26,17 +25,14 @@ function Products() {
       .from("products")
       .select("*");
 
-    if (error) {
-      console.log("READ ERROR:", error);
-      return;
+    if (!error) {
+      setProducts(data || []);
     }
-
-    setProducts(data || []);
   };
 
   const addProduct = async () => {
     if (!name || !brand || !price) {
-      alert("Fill all fields");
+      alert("Please fill all fields");
       return;
     }
 
@@ -63,15 +59,10 @@ function Products() {
   };
 
   const deleteProduct = async (id) => {
-    const { error } = await supabase
+    await supabase
       .from("products")
       .delete()
       .eq("id", id);
-
-    if (error) {
-      console.log("DELETE ERROR:", error);
-      return;
-    }
 
     fetchProducts();
   };
@@ -85,58 +76,76 @@ function Products() {
         padding: "20px"
       }}
     >
-
       <h2>Add Product</h2>
 
-      {/* PRODUCT NAME */}
-      <input
-        placeholder="Enter Product Name"
+      {/* Product Name Dropdown */}
+      <select
         value={name}
-        onChange={(e) => setName(e.target.value)}
-        style={{ padding: "10px", width: "300px" }}
-      />
+        onChange={(e) => {
+          setName(e.target.value);
+          setBrand("");
+        }}
+        style={{
+          padding: "10px",
+          width: "350px"
+        }}
+      >
+        <option value="">Select Product Name</option>
+        <option value="laptop">Laptop</option>
+        <option value="mobile">Mobile</option>
+        <option value="gaming">Gaming</option>
+        <option value="accessories">Accessories</option>
+        <option value="headphones">Headphones</option>
+      </select>
 
-      <br /><br />
+      <br />
+      <br />
 
-      {/* BRAND DROPDOWN */}
+      {/* Brand Dropdown */}
       <select
         value={brand}
         onChange={(e) => setBrand(e.target.value)}
-        style={{ padding: "10px", width: "300px" }}
+        style={{
+          padding: "10px",
+          width: "350px"
+        }}
       >
         <option value="">Select Brand</option>
 
-        {Object.values(brandOptions)
-          .flat()
-          .map((b, i) => (
-            <option key={i} value={b}>
-              {b}
+        {name &&
+          brandOptions[name]?.map((item, index) => (
+            <option key={index} value={item}>
+              {item}
             </option>
           ))}
       </select>
 
-      <br /><br />
+      <br />
+      <br />
 
-      {/* PRICE */}
+      {/* Price */}
       <input
         type="number"
         placeholder="Enter Price"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
-        style={{ padding: "10px", width: "300px" }}
+        style={{
+          padding: "10px",
+          width: "350px"
+        }}
       />
 
-      <br /><br />
+      <br />
+      <br />
 
       <button onClick={addProduct}>
         Add Product
       </button>
 
-      <hr style={{ width: "80%" }} />
+      <hr style={{ width: "80%", marginTop: "20px" }} />
 
       <h2>Product List</h2>
 
-      {/* PRODUCT LIST */}
       {products.length === 0 ? (
         <p>No products found</p>
       ) : (
@@ -144,25 +153,34 @@ function Products() {
           <div
             key={item.id}
             style={{
-              border: "2px solid black",
-              padding: "20px",
-              margin: "15px",
-              width: "350px",
+              border: "2px solid #ccc",
               borderRadius: "10px",
+              padding: "20px",
+              margin: "10px",
+              width: "350px",
               textAlign: "center"
             }}
           >
-            <p><b>Name:</b> {item.name}</p>
-            <p><b>Brand:</b> {item.brand}</p>
-            <p><b>Price:</b> ₹{item.price}</p>
+            <p>
+              <b>Name:</b> {item.name}
+            </p>
 
-            <button onClick={() => deleteProduct(item.id)}>
+            <p>
+              <b>Brand:</b> {item.brand}
+            </p>
+
+            <p>
+              <b>Price:</b> ₹{item.price}
+            </p>
+
+            <button
+              onClick={() => deleteProduct(item.id)}
+            >
               Delete
             </button>
           </div>
         ))
       )}
-
     </div>
   );
 }
