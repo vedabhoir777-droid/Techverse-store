@@ -1,76 +1,91 @@
-function Features() {
-  return (
-    <section style={styles.container}>
-      <h2>Features</h2>
+function Features(){
+  
+  const features=[
+    {
+      icon:"🚚",
+      title:"Fast Delivery",
+      text:"Quick and reliable delivery at your doorstep."
+    },
+    {
+      icon:"🔒",
+      title:"Secure Payment",
+      text:"Safe and secure payment experience."
+    },
+    {
+      icon:"⭐",
+      title:"Premium Quality",
+      text:"Trusted products from top brands."
+    },
+    {
+      icon:"💬",
+      title:"Customer Support",
+      text:"We are always ready to help you."
+    }
+  ];
 
-      <div style={styles.grid}>
-        <div style={styles.card}>
-          <img
-            src="https://www.91-img.com/pictures/laptops/samsung/samsung-np940xha-lg1in-167801-v1-original-1.jpg?tr=h-180,c-at_max,q-70,t-true"
-            alt="Laptop"
-            style={styles.image}
-          />
-          <h3 style={styles.tag}>Laptop</h3>
+  return(
+  
+  <section style={styles.section}>
+    <h1 style={styles.heading}>
+      Why Choose TechVerse?
+    </h1>
+    <p style={styles.subtitle}>
+      A better way to shop technology online
+    </p>
+    <div style={styles.container}>
+      {
+      features.map((item,index)=>(
+      <div
+      key={index}
+      style={styles.card}>
+        <div style={styles.icon}>
+          {item.icon}
         </div>
-
-        <div style={styles.card}>
-          <img
-            src="https://i5.walmartimages.com/seo/Unlocked-Cell-phones-Smartphone-3GB-RAM-64GB-ROM-6-8-HD-Face-Unlocked-Phone-for-T-Mobile-i14-Pro-Max_13d609ad-3bf5-4af6-847f-85988d5da947.857994c4a2fa7cbe15feb9053411bb9c.jpeg"
-            alt="Smartphone"
-            style={styles.image}
-          />
-          <h3 style={styles.tag}>Smartphone</h3>
-        </div>
-
-        <div style={styles.card}>
-          <img
-            src="https://www.portronics.com/cdn/shop/files/Portronics_Muff_M3_best_headphones_under_5000.jpg?v=1744893854"
-            alt="Headphones"
-            style={styles.image}
-          />
-          <h3 style={styles.tag}>Headphones</h3>
-        </div>
-      </div>
-    </section>
-  );
+        <h2>
+          {item.title}
+        </h2>
+        <p>
+          {item.text}
+        </p>
+      </div>))}
+    </div>
+  </section>
+);
 }
-
-const styles = {
-  container: {
-    textAlign: "center",
-    padding: "20px",
+const styles={
+  section:{
+    padding:"60px 20px 50px",
+    background:"#F5E6D3",
+    marginBottom:"0px"
   },
-
-  grid: {
-    display: "flex",
-    justifyContent: "center",
-    gap: "20px",
-    flexWrap: "wrap",
+  heading:{
+    textAlign:"center",
+    fontSize:"45px",
+    fontWeight:"900",
+    color:"#0f172a"
   },
-
-  card: {
-    width: "180px",
-    borderRadius: "10px",
-    overflow: "hidden",
-    boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
-    backgroundColor: "#ffffff",
+  subtitle:{
+    textAlign:"center",
+    color:"#64748b",
+    fontSize:"18px",
+    marginBottom:"50px"
   },
-
-  image: {
-    width: "150px",
-    height: "150px",
-    objectFit: "contain",
-    padding: "15px",
+  container:{
+    display:"grid",
+    gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))",
+    gap:"30px"
   },
-
-  tag: {
-    margin: "0",
-    padding: "12px",
-    backgroundColor: "#374151",
-    color: "white",
-    textAlign: "center",
-    fontWeight: "bold",
+  card:{
+    background:"white",
+    padding:"35px 25px",
+    borderRadius:"25px",
+    textAlign:"center",
+    boxShadow:"0 15px 35px rgba(0,0,0,.1)",
+    transition:"0.3s"
   },
+  icon:{
+    fontSize:"45px",
+    marginBottom:"20px"
+  }
 };
-
 export default Features;
