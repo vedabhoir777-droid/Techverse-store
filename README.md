@@ -26,7 +26,7 @@ A modern e-commerce website built with React and Supabase that provides a smooth
 ## 📸 Screenshots
 
 ### Home Page
-![Home](./screenshots/home.png)
+![Home](https://github.com/vedabhoir777-droid/Techverse-store/blob/594a4bc9622c80fc10b0a140d2d652989beff83d/Home_page.png)
 
 ### Shop Page
 ![Shop](./screenshots/shop.png)
