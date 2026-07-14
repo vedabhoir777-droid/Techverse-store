@@ -4,7 +4,7 @@ A modern e-commerce website built with React and Supabase that provides a smooth
 
 ## 🌐 Live Demo
 
-🔗 Vercel Link: Your_Link_Here
+🔗 Vercel Link: (https://techverse-store.vercel.app/)
 
 ## ✨ Features
 
