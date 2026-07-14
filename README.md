@@ -32,9 +32,5 @@ A modern e-commerce website built with React and Supabase that provides a smooth
 ![Shop](https://github.com/vedabhoir777-droid/Techverse-store/blob/3769c672a97f0a3446fa73e8495eb2ca14ce8944/Shop_page.png)
 
 ### Add Product
-![Add Product](./screenshots/add-product.png)
+![Add Product](https://github.com/vedabhoir777-droid/Techverse-store/blob/40817ce10b96cf4003b0dd89655d15f84b156381/Addproduct_page.png)
 
-
-
-
-github.com/vedabhoir777-droid/Techverse-store/blob/49ca58d2bd2b8fd24b7c074c339c93e59081493a/Screenshot%202026-06-15%20193406.png)
